@@ -1,0 +1,29 @@
+.form-filter-wrapper .ant-form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px ;
+}
+
+.form-filter-wrapper .ant-form-item {
+    padding: 10px;
+}
+
+@media screen and (max-width: 1780px) {
+    .form-filter-wrapper .ant-form {
+        flex-direction: column;
+        justify-content: center;
+        max-width: 400px;
+    }
+    .form-filter-wrapper .ant-form-item {
+        width: fit-content;
+    }
+    .form-item-btn {
+        margin-bottom: 0;
+    }
+    .form-filter-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+}

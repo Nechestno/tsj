@@ -1,0 +1,26 @@
+.header-container {
+  text-align: left;
+  height: 57px;
+  color: #fff;
+  font-size: 24px;
+  background-color: #ec1c24;
+  border: 1px solid #979797;
+  background-image: url(./src/img/header.png);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project-place {
+  display: none;
+}
+
+.exit-button {
+margin-top: 11px;
+}
+.button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 11px 0px;
+}
