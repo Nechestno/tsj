@@ -1,7 +1,7 @@
 import  { useEffect } from 'react';
 import {
   API_GET_TSJ_REPORT,
-} from '../../constants/routes.ts';
+} from '../../constants/endpoints.ts';
 import * as FileSaver from 'file-saver';
 import $api from '../../api.ts';
 

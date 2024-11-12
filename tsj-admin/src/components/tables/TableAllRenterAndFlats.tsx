@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { API_GET_ALL_RENTERS } from '../../constants/routes.ts';
+import { API_GET_ALL_RENTERS } from '../../constants/endpoints.ts';
 import { Table } from 'antd';
 import $api from '../../api.ts';
 

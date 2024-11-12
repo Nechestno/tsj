@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Flex, Layout } from 'antd';
 import './index.css'
-import { useLoginStore } from '../../pages/Login/store.ts';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks.ts';
+import { setLoggedOut } from '../../store/authSlice.ts';
 
 interface IHeaderComponent {
   header: React.ReactNode;
@@ -11,12 +12,13 @@ interface IHeaderComponent {
 
 const HeaderComponent: React.FC<IHeaderComponent> = ({ header }) => {
   const { Header } = Layout;
-  const isAuthenticated = useLoginStore(state => state.isAuthenticated);
-  const logout = useLoginStore(state => state.logout)
+  const isAuthenticated = useAppSelector(state => state.persistedReducer.auth.isAuthenticated);
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   const onChangeButton = () => {
-    logout(navigate);
+    dispatch(setLoggedOut());
+    navigate('/')
   }
 
 

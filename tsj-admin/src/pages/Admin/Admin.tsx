@@ -51,6 +51,7 @@ const items: MenuProps['items'] = [
 ];
 
 
+
 const Admin: React.FC = () =>{
 
     const [tsj, setTsj] = useState('');
@@ -65,7 +66,7 @@ const Admin: React.FC = () =>{
             setSelectedKey(value.key);
 
     };
-    const onChangeDate = (value: any) => {
+    const onChangeDate = (value: Da) => {
         setDate(value);
     };
     const onChangeUser = (value: any) => {
@@ -108,7 +109,7 @@ const Admin: React.FC = () =>{
                 }
                 break;
             case '4':
-                setSelectedTable('table4');
+                    setSelectedTable('table4');
                 break;
             case '5':
                 if (!tsj) {
@@ -127,7 +128,7 @@ const Admin: React.FC = () =>{
                 }
                 break;
             case '7':
-                setSelectedTable('table7');
+                    setSelectedTable('table7');
                 break;
         }
     };
@@ -164,7 +165,7 @@ const Admin: React.FC = () =>{
                   <RangePicker onChange={onChangeDate} />
               </Form.Item>
 
-              <Form.Item className='form-item-btn' wrapperCol={{ offset: 6, span: 14 }}>
+              <Form.Item className='form-item-btn' >
                   <Dropdown menu={menuProps}>
                       <Button style={{backgroundColor: '#1890FF', color: 'white', width: '170px'}}>
                           <Space>
@@ -174,7 +175,7 @@ const Admin: React.FC = () =>{
                   </Dropdown>
               </Form.Item>
 
-              <Form.Item>
+              <Form.Item className='form-item-btn'>
                   <CreateAddModal></CreateAddModal>
               </Form.Item>
           </Form>

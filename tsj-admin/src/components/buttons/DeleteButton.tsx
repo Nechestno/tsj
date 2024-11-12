@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import $api from '../../api.ts';
-import { API_DELETE_VALUE} from '../../constants/routes.ts';
+import { API_DELETE_VALUE} from '../../constants/endpoints.ts';
 
 
 const DeleteButton  = ({props}) => {

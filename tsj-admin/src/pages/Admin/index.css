@@ -8,15 +8,19 @@
 .form-filter-wrapper .ant-form-item {
     padding: 10px;
 }
+.form-filter-wrapper .form-item-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: 0;
+}
 
 @media screen and (max-width: 1780px) {
     .form-filter-wrapper .ant-form {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         max-width: 400px;
-    }
-    .form-filter-wrapper .ant-form-item {
-        width: fit-content;
     }
     .form-item-btn {
         margin-bottom: 0;

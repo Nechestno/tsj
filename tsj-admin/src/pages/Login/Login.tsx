@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, Checkbox, Form, Input, Typography, ConfigProvider } from 'antd';
 import './index.css';
-import { useLoginStore } from './store.ts';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks.ts';
+import { setLoggedIn, submitCredentials } from '../../store/authSlice.ts';
 
 
 const Login: React.FC = () => {
   const { Title } = Typography;
-  const { sendCredentials } = useLoginStore();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const isAuthenticated = useAppSelector(state => state.persistedReducer.auth.isAuthenticated)
+
   const onFinish = (values: any) => {
-    const {login, password} = values;
-    sendCredentials({ login,password}, navigate);
+     const {login, password} = values;
+     dispatch(submitCredentials({login, password}));
+     dispatch(setLoggedIn());
   };
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
     alert("Введен неправильный логин или пароль")
   };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/admin'); // Redirect to the admin page or any other page
+    }
+  }, [isAuthenticated, navigate]);
  
     return (
       
@@ -36,7 +46,7 @@ const Login: React.FC = () => {
               wrapperCol={{ span: 18 }}
               initialValues={{ remember: true }} 
               onFinish={onFinish}
-              onFinishFailed={onFinishFailed} 
+              onFinishFailed={onFinishFailed}
               autoComplete="off"
             >
                 <Title className='form-title'>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form, Input, Modal } from 'antd';
 import $api from '../../api.ts';
-import { API_PUT_VALUE } from '../../constants/routes.ts';
+import { API_PUT_VALUE } from '../../constants/endpoints.ts';
 
 
 interface CreateChangeInfoModalProps {

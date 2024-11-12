@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {
   API_GET_ALL_VALUE_HISTORY_BY_DATE
-} from '../../constants/routes.ts';
+} from '../../constants/endpoints.ts';
 import { Button, Table } from 'antd';
 import $api from '../../api.ts';
 import CreateChangeInfoModal from '../modals/CreateChangeInfoModal.tsx';

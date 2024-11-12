@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { API_GET_ALL_USER_INFO_BY_TSJ_ID } from '../../constants/routes.ts';
+import { API_GET_ALL_USER_INFO_BY_TSJ_ID } from '../../constants/endpoints.ts';
 import { Table } from 'antd';
 import $api from '../../api.ts';
 

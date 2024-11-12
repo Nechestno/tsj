@@ -1,6 +1,6 @@
 import { Select } from 'antd';
 import  { useEffect, useState } from 'react';
-import {  API_STREET_GET_ALL } from '../../constants/routes.ts';
+import {  API_STREET_GET_ALL } from '../../constants/endpoints.ts';
 import $api from '../../api.ts';
 import { Props } from '../../types/data.types.ts'
 

@@ -1,7 +1,7 @@
   import React, { useState } from 'react';
 import { Button, Form, Input, Modal } from 'antd';
 import $api from '../../api.ts';
-import { API_POST_VALUE } from '../../constants/routes.ts';
+import { API_POST_VALUE } from '../../constants/endpoints.ts';
 
 
 const CreateAddModal: React.FC = () => {
@@ -40,7 +40,7 @@ const CreateAddModal: React.FC = () => {
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      <Button type="primary" style={{display: 'flex', justifyContent: 'center'}} onClick={showModal}>
         Добавить показание
       </Button>
 

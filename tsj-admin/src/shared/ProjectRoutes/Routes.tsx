@@ -12,12 +12,10 @@ import Admin from "../../pages/Admin";
 export const ProjectRoutes = () => {
   return (
     <Routes>
+
       <Route path="/" element={<SiteLayout header={<span className="project-place">{PROJECT_NAME}</span>} />}>
-        <Route index element={<Login />} />
-        {/*<Route element={<PrivateRouteGuestPage />}>*/}
-        {/*  <Route path="user">*/}
-            <Route path='admin' element={<Admin />}> </Route>
-          {/*</Route>*/}
+          <Route index element={<Login />} /> :
+          <Route path='admin' element={<Admin />}> </Route>
           <Route path="*" element={<NoMatch />} />
           <Route path="passrecovery" element={<PasswordRecovery />} />
         </Route>
